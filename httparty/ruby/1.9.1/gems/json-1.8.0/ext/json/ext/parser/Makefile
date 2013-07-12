@@ -126,8 +126,8 @@ STATIC_LIB =
 
 BINDIR        = $(bindir)
 RUBYCOMMONDIR = $(sitedir)$(target_prefix)
-RUBYLIBDIR = C:/Sites/JobBoard/httparty/ruby/1.9.1/gems/json-1.8.0/lib$(target_prefix)
-RUBYARCHDIR = C:/Sites/JobBoard/httparty/ruby/1.9.1/gems/json-1.8.0/lib$(target_prefix)
+RUBYLIBDIR = C:/Sites/JobBoardv2/httparty/ruby/1.9.1/gems/json-1.8.0/lib$(target_prefix)
+RUBYARCHDIR = C:/Sites/JobBoardv2/httparty/ruby/1.9.1/gems/json-1.8.0/lib$(target_prefix)
 HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix)
 ARCHHDRDIR    = $(rubyhdrdir)/$(arch)/ruby$(target_prefix)
 

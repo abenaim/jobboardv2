@@ -5,23 +5,30 @@
     <!-- Compagny Logo--->
     <div style="padding: 5px;"><img src="<%= @job['ResponseJob']['Job']['CompanyImageURL'] %>" class="logoCmp"></div>
     <div style="padding: 5px;" class="lnkCmp"> <a href="<%=  %>"><%= @job['ResponseJob']['Job']['Company'] %></a> </div>
-    <div style="padding: 5px;"><a href="<%=  @job['ResponseJob']['Job']['ApplyURL']%>" class="btn btn-info btn-block" style="font-size: 22px; font-weight: bold;">Postuler</a></div>
+    <div style="padding: 5px;"><%= link_to  'Postuler' , apply_path(@job['ResponseJob']['Job']['DID']) ,:class => "btn btn-info btn-block" , :style=>"font-size: 22px; font-weight: bold;" %></div>
+
     <!-- Compagny Info--->
-    <div style="background: #DDDDDD;padding: 5px;margin-top: 15px;">Contact</div>
-      <div class="standard">Name : <%=  @job['ResponseJob']['Job']['ContactInfoName']%></div>
-      <div class="standard">Tel :  <%=  @job['ResponseJob']['Job']['ContactInfoPhone']%></div>
-      <div class="standard">Fax :  <%=  @job['ResponseJob']['Job']['ContactInfoFax']%></div>
+    <div class="entete">Contact</div>
+      <div class="standard">Name : <span class="info"><%=  @job['ResponseJob']['Job']['ContactInfoName'] || 'N/C'%></span></div>
+      <div class="standard">Tel :  <span class="info"><%=  @job['ResponseJob']['Job']['ContactInfoPhone']|| 'N/C'%></span></div>
+      <div class="standard">Fax :  <span class="info"><%=  @job['ResponseJob']['Job']['ContactInfoFax']  || 'N/C' %></span></div>
 
     <!-- Job Info--->
-    <div style="background: #DDDDDD;padding: 5px;margin-top: 15px;">Emploi</div>
-        <div class="standard">Contrat : <%=  @job['ResponseJob']['Job']['EmploymentType']%></div>
-        <div class="standard">Experience : <%=  @job['ResponseJob']['Job']['ExperienceRequired']%></div>
-        <div class="standard">Adresse : <%=  @job['ResponseJob']['Job']['LocationStreet1']%><%=  @job['ResponseJob']['Job']['LocationStreet2']%></div>
-        <div class="standard">Ville : <%=  @job['ResponseJob']['Job']['LocationCity']%></div>
-        <div class="standard">Pays : <%=  @job['ResponseJob']['Job']['LocationCountry']%></div>
-  </div>
+    <div class="entete">Emploi</div>
+        <div class="standard">Catégories : <span class="info"><%=  @job['ResponseJob']['Job']['Categories']         || 'N/C'  %></span></div>
+        <div class="standard">Industry :   <span class="info"><%=  @job['ResponseJob']['Job']['IndustryCodes']      || 'N/C' %></span></div>
+        <div class="standard">Contrat :    <span class="info"><%=  @job['ResponseJob']['Job']['EmploymentType']     || 'N/C' %></span></div>
+        <div class="standard">Experience : <span class="info"><%=  @job['ResponseJob']['Job']['ExperienceRequired'] || 'N/C' %></span></div>
+        <div class="standard">Adresse :    <span class="info"><%=  @job['ResponseJob']['Job']['LocationStreet1']    || 'N/C' %></span></div>
+        <div class="standard">Ville :      <span class="info"><%=  @job['ResponseJob']['Job']['LocationCity']       || 'N/C' %></span></div>
+        <div class="standard">Pays :       <span class="info"><%=  @job['ResponseJob']['Job']['LocationCountry']    || 'N/C' %></span></div>
+    </div>
+
   <div class="col2">
+    <p class="header-title">Description</p>
     <div class="lnkDesc"><%= raw CGI.unescapeHTML(@job['ResponseJob']['Job']['JobDescription']) %></div>
+    <p class="header-title">Requirement</p>
+    <div class="lnkDesc"><%= raw CGI.unescapeHTML(@job['ResponseJob']['Job']['JobRequirements']) %></div>
   </div>
 </div>
 

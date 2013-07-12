@@ -3,6 +3,7 @@ JobBoard::Application.routes.draw do
 
   get 'home/:did' , to: 'home#show', as: 'jdp'  # utile pour pouvoir utliser le jdp_path() voir index.html
 
+  get 'home/apply/:did' , to: 'home#apply', as: 'apply'  # utile pour pouvoir utliser le apply_path() voir show.html
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

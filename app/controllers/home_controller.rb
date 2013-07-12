@@ -16,5 +16,9 @@ class HomeController < ApplicationController
     @job = JSON.parse(response.response.body)
   end
 
+  def apply
+    @jobdid =  params[:did]
+  end
+
 
 end
