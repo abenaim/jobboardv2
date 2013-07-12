@@ -1,0 +1,21 @@
+<h3>There is 30 jobs </h3>
+
+<% @results['ResponseJobSearch']['Results']['JobSearchResult'].each do |key| %>
+
+<div class="ligne">
+  <div class="col1">
+    <div><img src="<%= key['CompanyImageURL'] %>" class="logoCmp"></div>
+    <div class="lnkCmp"> <a href="<%= key['CompanyDetailsURL'] %>"><%= key['Company'] %></a> </div>
+  </div>
+  <div class="col2">
+        <div class="lnkTitle"><%= link_to key['JobTitle'] , jdp_path(key['DID']) %></div>
+        <div class="lnkDate"><%= key['PostedDate'] %></div>
+        <div class="lnkLoc"><%= key['Location'] %></div>
+        <div class="lnkDesc"><%= key['DescriptionTeaser'] %></div>
+  </div>
+</div>
+<hr>
+<%end%>
+
+
+

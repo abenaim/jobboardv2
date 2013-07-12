@@ -1,0 +1,23 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.ligne{background:#C4D7ED ;clear: both;height: 80px;padding: 5px;}
+.col1{float:left;width: 25%;}
+.col2{float:left; margin-left: 20px;width: 70%;}
+.logoCmp{width: 135px;height: 50px;}
+.lnkCmp{padding-top: 3px;}
+.lnkTitle{float:left;}
+.lnkDate{float:right;}
+.lnkLoc{clear: both;font-size:12px;}
+.lnkDesc{clear: both;font-size:11px;}
+
+
+.JDPTitle{
+  background: none repeat scroll 0 0 #C4D7ED;
+  font-size: 26px;
+  font-weight: bold;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.standard{padding: 5px;}

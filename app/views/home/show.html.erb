@@ -1,0 +1,28 @@
+<div>
+  <div class="JDPTitle"><%= @job['ResponseJob']['Job']['JobTitle'] %></div>
+
+  <div class="col1">
+    <!-- Compagny Logo--->
+    <div style="padding: 5px;"><img src="<%= @job['ResponseJob']['Job']['CompanyImageURL'] %>" class="logoCmp"></div>
+    <div style="padding: 5px;" class="lnkCmp"> <a href="<%=  %>"><%= @job['ResponseJob']['Job']['Company'] %></a> </div>
+    <div style="padding: 5px;"><a href="<%=  @job['ResponseJob']['Job']['ApplyURL']%>" class="btn btn-info btn-block" style="font-size: 22px; font-weight: bold;">Postuler</a></div>
+    <!-- Compagny Info--->
+    <div style="background: #DDDDDD;padding: 5px;margin-top: 15px;">Contact</div>
+      <div class="standard">Name : <%=  @job['ResponseJob']['Job']['ContactInfoName']%></div>
+      <div class="standard">Tel :  <%=  @job['ResponseJob']['Job']['ContactInfoPhone']%></div>
+      <div class="standard">Fax :  <%=  @job['ResponseJob']['Job']['ContactInfoFax']%></div>
+
+    <!-- Job Info--->
+    <div style="background: #DDDDDD;padding: 5px;margin-top: 15px;">Emploi</div>
+        <div class="standard">Contrat : <%=  @job['ResponseJob']['Job']['EmploymentType']%></div>
+        <div class="standard">Experience : <%=  @job['ResponseJob']['Job']['ExperienceRequired']%></div>
+        <div class="standard">Adresse : <%=  @job['ResponseJob']['Job']['LocationStreet1']%><%=  @job['ResponseJob']['Job']['LocationStreet2']%></div>
+        <div class="standard">Ville : <%=  @job['ResponseJob']['Job']['LocationCity']%></div>
+        <div class="standard">Pays : <%=  @job['ResponseJob']['Job']['LocationCountry']%></div>
+  </div>
+  <div class="col2">
+    <div class="lnkDesc"><%= raw CGI.unescapeHTML(@job['ResponseJob']['Job']['JobDescription']) %></div>
+  </div>
+</div>
+
+<%= @job %>

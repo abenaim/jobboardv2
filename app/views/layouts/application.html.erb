@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>JobBoard</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body data-target=".bs-docs-sidebar" data-spy="scroll" data-twttr-rendered="true">
+
+<%= render 'layouts/navHorizontal'%>
+
+
+<div id="main" role="main">
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <div class="span12">
+          <%= render 'layouts/header'%>
+          <div class="container-fluid">
+            <div class="row-fluid">
+              <div class="span2">
+                <!--Sidebar content-->
+                <%= render 'layouts/navVertical'%>
+              </div>
+              <div class="span10" style="border: 1px solid #dddddd; padding: 5px;">
+                <!--Body content-->
+                <%= yield %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer >
+    <%= render 'layouts/footer'%>
+  </footer>
+</div>
+
+
+</body>
+</html>
